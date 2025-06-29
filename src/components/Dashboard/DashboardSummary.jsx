@@ -1,10 +1,61 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import {
+    LayoutDashboard,
+    Library,
+    FileText,
+    Package,
+    Users,
+    UserCheck,
+    Monitor,
+    CreditCard,
+    Leaf,
+    LogOut,
+    HelpCircle,
+    TrendingUp,
+    DollarSign,
+    ShoppingCart,
+    Percent
+} from 'lucide-react';
+import SummaryCard from '../ui/SummaryCard';
 
 const DashboardSummary = () => {
     const summaryData = [
-        { title: 'Total Sales', value: 100000, icon: '💰', color: 'bg-blue-500' },
-        { title: 'Total Orders', value: 1000, icon: '📦', color: 'bg-green-500' },
-        { title: 'Average Rating', value: 4.8, icon: '🌟', color: 'bg-yellow-500' },
+        {
+            title: 'Gross Sales',
+            value: 'Rp 12,450,000',
+            icon: DollarSign,
+            color: 'text-green-600'
+        },
+        {
+            title: 'Net Sales',
+            value: 'Rp 11,205,000',
+            icon: TrendingUp,
+            color: 'text-blue-600'
+        },
+        {
+            title: 'Gross Profit',
+            value: 'Rp 8,715,000',
+            icon: TrendingUp,
+            color: 'text-purple-600'
+        },
+        {
+            title: 'Transactions',
+            value: '1,247',
+            icon: ShoppingCart,
+            color: 'text-orange-600'
+        },
+        {
+            title: 'Avg Sale/Transaction',
+            value: 'Rp 9,985',
+            icon: DollarSign,
+            color: 'text-teal-600'
+        },
+        {
+            title: 'Gross Margin',
+            value: '69.98%',
+            icon: Percent,
+            color: 'text-pink-600'
+        }
     ];
 
     const weeklyData = [
@@ -39,7 +90,7 @@ const DashboardSummary = () => {
         { hour: 18, sales: 130 },
         { hour: 19, sales: 110 },
     ];
-    
+
     return (
         <div className="space-y-8">
             {/* Summary Cards Grid */}
@@ -97,6 +148,6 @@ const DashboardSummary = () => {
             </div>
         </div>
     );
-}; 
+};
 
 export default DashboardSummary;

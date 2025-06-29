@@ -1,4 +1,35 @@
+import {
+    LayoutDashboard,
+    Library,
+    FileText,
+    Package,
+    Users,
+    UserCheck,
+    Monitor,
+    CreditCard,
+    Leaf,
+    LogOut,
+    HelpCircle,
+    TrendingUp,
+    DollarSign,
+    ShoppingCart,
+    Percent
+} from 'lucide-react';
+
 const Sidebar = ({ activeTab, setActiveTab }) => {
+
+    const navigationItems = [
+        { name: 'Dashboard', icon: LayoutDashboard, active: true },
+        { name: 'Library', icon: Library },
+        { name: 'Reports', icon: FileText },
+        { name: 'Inventory', icon: Package },
+        { name: 'Employee', icon: Users },
+        { name: 'Customers', icon: UserCheck },
+        { name: 'Customer Display', icon: Monitor },
+        { name: 'Payments', icon: CreditCard },
+        { name: 'Green Report', icon: Leaf }
+    ];
+
     return (
         <div className="w-64 bg-blue-600 text-white h-screen flex flex-col">
             {/* Logo */}
@@ -21,8 +52,8 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                                 <button
                                     onClick={() => setActiveTab(item.name)}
                                     className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${activeTab === item.name
-                                            ? 'bg-blue-700 text-white'
-                                            : 'text-blue-100 hover:bg-blue-500 hover:text-white'
+                                        ? 'bg-blue-700 text-white'
+                                        : 'text-blue-100 hover:bg-blue-500 hover:text-white'
                                         }`}
                                 >
                                     <Icon className="w-5 h-5" />

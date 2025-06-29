@@ -1,3 +1,5 @@
+import { Monitor } from 'lucide-react';
+
 const OutletComparison = () => {
     return (
         <div className="bg-white rounded-lg shadow-md p-12 border border-gray-200 text-center">

@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/ui/Sidebar';
 import Dashboard from './pages/Dashboard';
 import PlaceholderPage from './pages/PlaceholderPage';
+import './index.css';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Dashboard');
