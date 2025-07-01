@@ -1,16 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import {
-    LayoutDashboard,
-    Library,
-    FileText,
-    Package,
-    Users,
-    UserCheck,
-    Monitor,
-    CreditCard,
-    Leaf,
-    LogOut,
-    HelpCircle,
     TrendingUp,
     DollarSign,
     ShoppingCart,

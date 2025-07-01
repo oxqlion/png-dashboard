@@ -15,6 +15,7 @@ import {
     ShoppingCart,
     Percent
 } from 'lucide-react';
+import logo from '../../assets/logo.png';
 
 const Sidebar = ({ activeTab, setActiveTab }) => {
 
@@ -33,13 +34,14 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
     return (
         <div className="w-64 bg-blue-600 text-white h-screen flex flex-col">
             {/* Logo */}
-            <div className="p-6 border-b border-blue-500">
-                <div className="flex items-center space-x-2">
+            <div className="px-6 border-b border-blue-500">
+                <img src={logo} alt="logo" className="w-full h-auto" />
+                {/* <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <LayoutDashboard className="w-5 h-5 text-blue-600" />
                     </div>
                     <span className="text-xl font-bold">AdminDash</span>
-                </div>
+                </div> */}
             </div>
 
             {/* Navigation */}

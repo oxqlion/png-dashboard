@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Sidebar from './components/ui/Sidebar';
 import Dashboard from './pages/Dashboard';
+import Library from './pages/Library';
 import PlaceholderPage from './pages/PlaceholderPage';
 import './index.css';
 
@@ -11,6 +12,8 @@ const App = () => {
     switch (activeTab) {
       case 'Dashboard':
         return <Dashboard />;
+      case 'Library':
+        return <Library />;
       default:
         return <PlaceholderPage title={activeTab} />;
     }
