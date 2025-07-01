@@ -13,7 +13,7 @@ import {
     serverTimestamp,
     increment
   } from 'firebase/firestore';
-  import { db } from './firebaseConfig';
+import db from './firebaseConfig';
   
   // ========== ITEMS COLLECTION ==========
   
@@ -116,12 +116,13 @@ import {
   
   // Get all categories
   export const getCategories = async () => {
+    console.log("getCategories loading ...");
     try {
       const querySnapshot = await getDocs(
         query(
           collection(db, 'categories'), 
-          where('isActive', '==', true),
-          orderBy('sortOrder')
+          where('isActive', '==', true)
+        //   orderBy('sortOrder')
         )
       );
       const categories = [];
