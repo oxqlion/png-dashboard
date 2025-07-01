@@ -37,7 +37,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Content */}a
+      {/* Content */}
       {activeSection === 'summary' ? <DashboardSummary /> : <OutletComparison />}
     </div>
   );
