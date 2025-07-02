@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import GreenReport from './pages/GreenReport';
 import Library from './pages/Library';
 import PlaceholderPage from './pages/PlaceholderPage';
+import Reports from './pages/Reports';
 import './index.css';
 
 const App = () => {
@@ -17,6 +18,8 @@ const App = () => {
         return <Library />;
       case 'Green Report':
         return <GreenReport />;
+      case 'Reports':
+        return <Reports />;
       default:
         return <PlaceholderPage title={activeTab} />;
     }
