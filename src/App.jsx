@@ -5,6 +5,7 @@ import GreenReport from './pages/GreenReport';
 import Library from './pages/Library';
 import PlaceholderPage from './pages/PlaceholderPage';
 import Reports from './pages/Reports';
+import CreditScoringPage from './pages/CreditScore';
 import './index.css';
 
 const App = () => {
@@ -20,6 +21,8 @@ const App = () => {
         return <GreenReport />;
       case 'Reports':
         return <Reports />;
+      case 'Credit Scoring':
+        return <CreditScoringPage />;
       default:
         return <PlaceholderPage title={activeTab} />;
     }
