@@ -22,6 +22,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
 
     const navigationItems = [
         { name: 'Dashboard', icon: LayoutDashboard, active: true },
+        // { name: 'Credit Scoring', icon: BanknoteArrowUp },
         { name: 'Library', icon: Library },
         { name: 'Reports', icon: FileText },
         { name: 'Inventory', icon: Package },
@@ -29,8 +30,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
         { name: 'Customers', icon: UserCheck },
         { name: 'Customer Display', icon: Monitor },
         { name: 'Payments', icon: CreditCard },
-        // { name: 'Green Report', icon: Leaf },
-        { name: 'Credit Scoring', icon: BanknoteArrowUp }
+        // { name: 'Green Report', icon: Leaf },        
     ];
 
     return (
