@@ -13,7 +13,8 @@ import {
     TrendingUp,
     DollarSign,
     ShoppingCart,
-    Percent
+    Percent,
+    BanknoteArrowUp
 } from 'lucide-react';
 import logo from '../../assets/logo.png';
 
@@ -28,7 +29,8 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
         { name: 'Customers', icon: UserCheck },
         { name: 'Customer Display', icon: Monitor },
         { name: 'Payments', icon: CreditCard },
-        { name: 'Green Report', icon: Leaf }
+        // { name: 'Green Report', icon: Leaf },
+        { name: 'Credit Scoring', icon: BanknoteArrowUp }
     ];
 
     return (
