@@ -14,7 +14,7 @@ import {
     DollarSign,
     ShoppingCart,
     Percent,
-    // BanknoteArrowUp
+    BanknoteArrowUp
 } from 'lucide-react';
 import logo from '../../assets/logo.png';
 
@@ -22,7 +22,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
 
     const navigationItems = [
         { name: 'Dashboard', icon: LayoutDashboard, active: true },
-        // { name: 'Credit Scoring', icon: BanknoteArrowUp },
+        { name: 'Credit Scoring', icon: BanknoteArrowUp },
         { name: 'Library', icon: Library },
         { name: 'Reports', icon: FileText },
         { name: 'Inventory', icon: Package },
