@@ -14,7 +14,7 @@ import {
     DollarSign,
     ShoppingCart,
     Percent,
-    BanknoteArrowUp
+    // BanknoteArrowUp
 } from 'lucide-react';
 import logo from '../../assets/logo.png';
 
