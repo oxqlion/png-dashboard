@@ -14,10 +14,13 @@ const CreditScoringPage = () => {
 
     // Sample data for transactions
     const transactions = [
-        { id: 1, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 15,000,000', status: 'Lunas', statusColor: 'bg-green-500' },
-        { id: 2, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 15,000,000', status: 'Lunas', statusColor: 'bg-green-500' },
-        { id: 3, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 15,000,000', status: 'Telat Bayar', statusColor: 'bg-yellow-500' },
-        { id: 4, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 15,000,000', status: 'Gagal Bayar', statusColor: 'bg-red-500' }
+        { id: 1, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 9,950,000', status: 'Lunas', statusColor: 'bg-green-500' },
+        { id: 2, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 11,650,000', status: 'Lunas', statusColor: 'bg-green-500' },
+        { id: 3, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 13,000,000', status: 'Telat Bayar', statusColor: 'bg-yellow-500' },
+        { id: 4, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 13,300,000', status: 'Telat Bayar', statusColor: 'bg-yellow-500' },
+        { id: 5, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 13,450,000', status: 'Telat Bayar', statusColor: 'bg-yellow-500' },
+        { id: 6, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 14,350,000', status: 'Telat Bayar', statusColor: 'bg-yellow-500' },
+        { id: 7, date: '15 Agustus 2025', title: 'Pinjaman A', amount: 'Rp 14,400,000', status: 'Telat Bayar', statusColor: 'bg-yellow-500' },
     ];
 
     // Sample data for bar chart
@@ -35,7 +38,7 @@ const CreditScoringPage = () => {
 
     const handleTransactionClick = (transactionId) => {
         // Placeholder for PDF opening functionality
-        window.open(`/api/transaction-report/${transactionId}.pdf`, '_blank');
+        window.open(`/reports/${transactionId}.pdf`, '_blank');
     };
 
     const handleInputChange = (e) => {
@@ -93,10 +96,10 @@ const CreditScoringPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 p-6">
+        <div className="flex flex-col h-full bg-gray-50 p-6">
             <h1 className="text-3xl font-semibold text-gray-700 mb-8">Credit Scoring</h1>
 
-            <div className="flex gap-6 h-full">
+            <div className="flex gap-6">
                 {/* Left Section */}
                 <div className="flex-1 space-y-6">
                     {/* Top Section */}
@@ -123,14 +126,16 @@ const CreditScoringPage = () => {
                                     <p className="text-sm text-gray-600 mb-4">
                                         Skor kredit Anda dinilai baik, sehingga Anda berkesempatan mendapatkan pinjaman hingga Rp15 juta dengan tenor 30 hari.
                                     </p>
-
                                     <div className="bg-blue-50 rounded-lg p-4">
-                                        <h5 className="font-medium text-blue-900 mb-2">Rekomendasi Instansi Peminjam</h5>
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <div className="text-blue-700 font-bold">BANK BRI</div>
-                                        </div>
-                                        <p className="text-xs text-blue-600 mb-2">Melayani Dengan Setulus Hati</p>
-                                        <p className="text-xs text-gray-600">Klik untuk lihat lebih lanjut (WhatsApp 081212401T)</p>
+                                        <a href='https://api.whatsapp.com/send/?phone=628121214017&text&type=phone_number&app_absent=0'>
+                                            <h5 className="font-medium text-blue-900 mb-2">Rekomendasi Instansi Peminjam</h5>
+                                            <div className="flex items-center gap-2 mb-2">
+                                                {/* <div className="text-blue-700 font-bold">BANK BRI</div> */}
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BRI_2020.svg" alt="logo" className="w-32" />
+                                            </div>
+                                            <p className="text-xs text-blue-600 mb-2">Melayani Dengan Setulus Hati</p>
+                                            <p className="text-xs text-gray-600">Klik untuk lihat lebih lanjut (WhatsApp 081212401T)</p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -204,7 +209,7 @@ const CreditScoringPage = () => {
                 </div>
 
                 {/* Right Section */}
-                <div className="w-80">
+                <div className="w-80 h-screen">
                     <div className="bg-white rounded-lg">
                         {/* Transaction List Header */}
                         <div className="p-4 border-b border-gray-200">
@@ -212,7 +217,7 @@ const CreditScoringPage = () => {
                         </div>
 
                         {/* Scrollable Transaction List */}
-                        <div className="max-h-96 overflow-y-auto">
+                        <div className="h-[45rem] overflow-y-auto">
                             {transactions.map((transaction) => (
                                 <div
                                     key={transaction.id}
