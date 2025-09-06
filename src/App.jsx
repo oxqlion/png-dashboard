@@ -19,7 +19,7 @@ const App = () => {
         return <Library />;
       case 'Green Report':
       //   return <GreenReport />;
-      // case 'Reports':
+      case 'Reports':
         return <Reports />;
       case 'Credit Scoring':
         return <CreditScoringPage />;
